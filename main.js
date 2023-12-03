@@ -53,16 +53,18 @@ $(document).ready(function() {
     //         condition = false;
     //     });
     let initialNum = 1;
-
+    let pokeCache = new Array();
     function getNextPokemon(thisNum) {
         fetch(`https://pokeapi.co/api/v2/pokemon/${thisNum}`)
         .then(res => res.json())
         .then(pokemon => {
+            pokeCache.push(pokemon);
             console.log('Poke id is ' + pokemon.id)
             console.log("Pokemon's name is " + pokemon.name);
             console.log("Pokemon's weight in pounds is: " + pokemon.weight * 0.22);
             console.log("Pokemon's base hp is " + pokemon.stats[0].base_stat);
             console.log('Aaaaaand the pokemon is....');
+            console.log('Pokecache length: ' + pokeCache.length)
             console.log(pokemon);
             
             const nextNum = thisNum + 1;
