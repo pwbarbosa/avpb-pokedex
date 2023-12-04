@@ -68,7 +68,7 @@ $(document).ready(function() {
             console.log(pokemon);
             
             const nextNum = thisNum + 1;
-            if (nextNum <= 100) { // Fetches up to Pokemon 100
+            if (pokemon && nextNum <= 500) { // Fetches up to Pokemon 100
                 getNextPokemon(nextNum);
             }
         });
