@@ -1,11 +1,9 @@
 
 $(document).ready(function() {
-    alert('ready')
     const x = document.querySelector("#nextButton");
     let num = 0;
 
     x.addEventListener("click", () => {
-        alert('next')
         console.clear();
         num++;
 
@@ -24,7 +22,6 @@ $(document).ready(function() {
 
     
     $('#_poke_index_go').click(function() {
-        alert('click');
         if($('#_poke_index_input').val()){
             console.clear();
             fetch(`https://pokeapi.co/api/v2/pokemon/${$('#_poke_index_input').val()}`)
