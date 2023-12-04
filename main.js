@@ -59,16 +59,11 @@ $(document).ready(function() {
         .then(res => res.json())
         .then(pokemon => {
             pokeCache.push(pokemon);
-            console.log('Poke id is ' + pokemon.id)
-            console.log("Pokemon's name is " + pokemon.name);
-            console.log("Pokemon's weight in pounds is: " + pokemon.weight * 0.22);
-            console.log("Pokemon's base hp is " + pokemon.stats[0].base_stat);
-            console.log('Aaaaaand the pokemon is....');
-            console.log('Pokecache length: ' + pokeCache.length)
-            console.log(pokemon);
-            
+            console.log('Poke id is ' + pokemon.id);
+            console.log('Pokecache length: ' + pokeCache.length);
+            nextNum == 1 ? console.log(pokemon) : nextNum = nextNum;
             const nextNum = thisNum + 1;
-            if (pokemon && nextNum <= 500) { // Fetches up to Pokemon 100
+            if (pokemon) { // Fetches up to Pokemon 100
                 getNextPokemon(nextNum);
             }
         });
