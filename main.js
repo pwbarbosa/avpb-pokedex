@@ -66,6 +66,7 @@ $(document).ready(function() {
         }).catch(function(e){
             console.error(e);
             console.log("Looks like we couldn't grab anymore Pokemon!")
+            console.log(pokeCache);
             //maybe have the system try to run getNextPokemon() from one more than last known index 5-10 more times. 
             //We could also save the final index in cookies, if not the whole array, to test to see if it is likely that we have all
             //the pokemon possible
