@@ -61,8 +61,8 @@ $(document).ready(function() {
             pokeCache.push(pokemon);
             console.log('Poke id is ' + pokemon.id);
             console.log('Pokecache length: ' + pokeCache.length);
-            nextNum == 1 ? console.log(pokemon) : nextNum = nextNum;
             const nextNum = thisNum + 1;
+            nextNum == 1 ? console.log(pokemon) : nextNum = nextNum;
             if (pokemon) { // Fetches up to Pokemon 100
                 getNextPokemon(nextNum);
             }
