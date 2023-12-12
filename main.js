@@ -60,19 +60,18 @@ $(document).ready(function() {
             console.log('Pokecache length: ' + pokeCache.length);
             const nextNum = thisNum + 1;
             nextNum == 1 ? console.log(pokemon) : console.log('Greater than 1!');
-            if (pokemon) { // Fetches up to Pokemon 100
+            if (pokemon) {
+                getNextPokemon(nextNum);
+            }else if(!pokemon && pokemon.id == 1017){
+                nextNum = 10001;
                 getNextPokemon(nextNum);
             }
         }).catch(function(e){
             console.error(e);
             console.log("Looks like we couldn't grab anymore here! Let's skip ahead");
-            nextNum = 10001;
-            getNextPokemon(nextNum);
             //maybe have the system try to run getNextPokemon() from one more than last known index 5-10 more times. 
             //We could also save the final index in cookies, if not the whole array, to test to see if it is likely that we have all
             //the pokemon possible
-        }).catch(function(e){
-            console.error(e);
         });
     }
 

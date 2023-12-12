@@ -1,3 +1,10 @@
 #_main_title {
     color: purple;
 }
+
+.poke-card {
+    height: 3.5in;
+    width: 2.5in;
+    border: .5px solid black;
+    border-radius: 7.5px;
+}
