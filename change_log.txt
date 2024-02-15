@@ -1,0 +1,4 @@
+Change log for AVPB-POKEDEX
+
+2/15/24
+- Added Change Log
